@@ -1,6 +1,9 @@
 
-load_data <- function(file_path) {
+load_data <- function(names) {
     # Read the CSV file
+    for (name in names){
+        path <- getcwd 
+        file_path
     data_clean <- read.csv(
         file_path,
         header = TRUE,
@@ -10,7 +13,7 @@ load_data <- function(file_path) {
     
     # Convert column names to lowercase
     names(data_clean) <- tolower(names(data_clean))
-    
+    }
     # Return the cleaned data frame
     return(data_clean)
 }
